@@ -19,7 +19,7 @@ $prodotti = [
     new giocattoli('./assets/file.jpg', 'Grilli multicolore', '5 Franchi cad.', $category['Gatto'], 'Cuciti a mano direttamente da mia nonna', 'molto piccoli, occhio che li perdete'),
     new Cibo('./assets/file.png', 'Trixie:Chicken filets', '5mila lire', $category['Cane'], 'mezzokg', 'Ingredienti: pollo, tonno,cioccolato, acido cloridico,bicarbonato'),
     new Cibo('./assets/file (1).png', 'Beefstick: rustico', 'molti yen', $category['Cane'], 'mezzokg', 'Ingredienti: estratto di thc,residui tossici riesumati da Chernobyl'),
-    new accessori('./assets/81vnnIPLCGL._AC_SL1500_.jpg','Bird Mansion','1/6 del tuo stipendio di questo mese',$category['Uccelli'],'Titanio (per proteggere i nostri volatili preferiti)','2 camere da letto,1 bagno, 1 salone, ottima per feste e famiglie allargate')
+    new accessori('./assets/81vnnIPLCGL._AC_SL1500_.jpg','Bird Mansion','1/6 del tuo stipendio di questo mese',$category['Uccelli'],'Titanio (per proteggere meglio i nostri volatili preferiti)','2 camere da letto,1 bagno, 1 salone, ottima per feste e famiglie allargate')
 ];
 
 
@@ -60,27 +60,27 @@ $prodotti = [
                             <?php echo ($elem->category->nome);
                     echo ($elem->category->icona); ?>
                         </p>
-                        <?php if (get_class($elem) == "caratteristiche") { ?>
+                        <?php if (get_class($elem) == "giocattoli") { ?>
                         <p class="card-text">
                             <?php echo ($elem->caratteristiche) ?>
                         </p>
                         <?php } ?>
-                        <?php if (get_class($elem) == "dimensioni") { ?>
+                        <?php if (get_class($elem) == "accessori") { ?>
+                        <p class="card-text">
+                            <?php echo ($elem->materiale) ?>
+                        </p>
+                        <?php } ?>
+                        <?php if (get_class($elem) == "giocattoli" || get_class($elem) == "accessori" ) { ?>
                         <p class="card-text">
                             <?php echo ($elem->dimensioni) ?>
                         </p>
                         <?php } ?>
-                        <?php if (get_class($elem) == "caratteristiche") { ?>
-                        <p class="card-text">
-                            <?php echo ($elem->caratteristiche) ?>
-                        </p>
-                        <?php } ?>
-                        <?php if (get_class($elem) == "pesoNetto") { ?>
+                        <?php if (get_class($elem) == "Cibo") { ?>
                         <p class="card-text">
                             <?php echo ($elem->pesoNetto) ?>
                         </p>
                         <?php } ?>
-                        <?php if (get_class($elem) == "ingredienti") { ?>
+                        <?php if (get_class($elem) == "Cibo") { ?>
                         <p class="card-text">
                             <?php echo ($elem->ingredienti) ?>
                         </p>
