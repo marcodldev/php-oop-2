@@ -8,12 +8,13 @@
     public $prezzo;
     public $category;
 
+
     function __construct(
         String $immagine,
         String $nome,
-        Float $prezzo,
+        String $prezzo,
         category $category
-        ){
+    ){
         $this->immagine = $immagine;
         $this->nome = $nome;
         $this->prezzo = $prezzo;

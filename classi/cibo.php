@@ -9,7 +9,7 @@ class Cibo extends Prodotto{
     function __construct(
         String $immagine,
         String $nome,
-        Float $prezzo,
+        String $prezzo,
         category $category,
 
         String $pesoNetto,
